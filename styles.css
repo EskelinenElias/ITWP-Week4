@@ -1,0 +1,71 @@
+/* sources: see file README.md *
+
+/* general formatting */
+body {
+    background-color: #eceff1;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* h1 text styling */
+.show-data h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/* show-container styling */
+.show-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* show-data styling */
+.show-data {
+    background-color: #cfd8dc;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* show-info styling */
+.show-info {
+    width: 100%;
+}
+
+/* image styling */
+.show-data img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* media query for large devices */
+@media (min-width: 800px) {
+    .show-data {
+        display: flex;
+        align-items: flex-start;
+    }
+    .show-info {
+        padding: 10px;
+    }
+    .show-data img {
+        max-width: 200px; 
+        margin-right: 20px;
+    }
+}
+
+/* media query for small devices */
+@media (max-width: 799px) {
+    .show-data img {
+        margin: auto;
+    }
+    .show-info p {
+        text-align: center;
+        padding: 10px;
+    }
+}

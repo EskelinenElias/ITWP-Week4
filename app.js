@@ -1,3 +1,5 @@
+// sources: see file README.md
+
 // a function for fetching show data usign a search phrase
 async function fetch_show(show) {
   try {
