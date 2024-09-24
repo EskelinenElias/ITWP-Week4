@@ -77,7 +77,9 @@ async function search(show) {
 // function for performing a search
 async function submit_form(event) {
   event.preventDefault();
+  const showContainer = document.getElementById('show-container');
   const show = document.getElementById('input-show').value;
+  showContainer.innerHTML = '';
   console.log(`Fetching ${show}...`)
   const json = await fetch_show(show);
   showResults(json);
