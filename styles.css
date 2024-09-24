@@ -1,0 +1,45 @@
+/* general formatting */
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 60px;
+}
+
+/* table general formatting */
+table {
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* table cell formatting */
+td {
+  padding: 6px;
+  border-bottom: 1px solid gray;
+}
+
+/* table header formatting */
+th {
+  background-color: #b7d0ff;
+  font-weight: bold;
+  padding: 12px 0 12px 6px;
+  border-bottom: 2px solid gray;
+}
+
+/* header formatting */
+h1 {
+  text-align: center;
+}
+
+/* even and odd rows coloring */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
