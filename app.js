@@ -1,4 +1,4 @@
-
+// a function for fetching show data usign a search phrase
 async function fetch_show(show) {
   try {
     const address = `https://api.tvmaze.com/search/shows?q=${show}`;
@@ -12,7 +12,8 @@ async function fetch_show(show) {
     console.log("Something else went wrong while attempting to fetch data: ", error);
   }
 }
-  
+
+// a function for creating a new showData element 
 function newShowData(item) {
   const showContainer = document.getElementById('show-container');
 
@@ -28,22 +29,23 @@ function newShowData(item) {
     showDataDiv.appendChild(image);
   }
 
-  // Create the info div
+  // create a div element for show info
   const showInfoDiv = document.createElement('div');
   showInfoDiv.className = 'show-info';
   showDataDiv.appendChild(showInfoDiv);
 
-  // Create the title element
+  // create title element
   const title = document.createElement('h1');
   title.textContent = item.show.name;
   showInfoDiv.appendChild(title);
 
-  // Append summary directly since it's already in <p> tags
+  // create summary element
   const summary = document.createElement('div');
   summary.innerHTML = item.show.summary;
   showInfoDiv.appendChild(summary);
 }
 
+// function for adding search results to the webpage
 function showResults(json) {
   const showContainer = document.getElementById('show-container');
 
@@ -60,6 +62,7 @@ function showResults(json) {
   })
 }
 
+// function for backend testing
 async function search(show) {
   console.log(`Fetching ${show}...`);
   json = await fetch_show(show);
@@ -68,6 +71,7 @@ async function search(show) {
   console.log("Ready!");
 }
 
+// function for performing a search
 async function submit_form(event) {
   event.preventDefault();
   const show = document.getElementById('input-show').value;
@@ -76,7 +80,13 @@ async function submit_form(event) {
   showResults(json);
 }
 
-// add event listener to input form
-document.getElementById('search-form').addEventListener('submit', submit_form);
+// main function
+function main() {
+  // add event listener to input form
+  document.getElementById('search-form').addEventListener('submit', submit_form);
+}
+
+// run app
+main()
 
 // search("friends");
