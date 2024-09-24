@@ -1,6 +1,7 @@
 # ignore server file
 server.js
-
+# ignore old code
 script_old.js
-
+app copy.js
+# ignore code editor settings
 .zed
