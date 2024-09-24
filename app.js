@@ -25,7 +25,7 @@ function newShowData(item) {
   showContainer.appendChild(showDataDiv);
 
   // create image element
-  if (item.show.image.medium) {
+  if (item.show.image) {
     const image = document.createElement('img');
     image.src = item.show.image.medium;
     showDataDiv.appendChild(image);
@@ -53,9 +53,10 @@ function showResults(json) {
 
   // check if no shows were found
   if (json.length === 0) {
-      showContainer.innerHTML = '<p>No shows found.</p>';
-      console.log("No shows found.")
-      return;
+    const show = document.getElementById('input-show').value;
+    showContainer.innerHTML = `<p>No shows found with '${show}'.</p>`;
+    console.log("No shows found.")
+    return;
   }
   // add shows to show container
   json.forEach(item => {
